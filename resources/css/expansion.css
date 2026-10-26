@@ -224,10 +224,10 @@ a:focus-visible { outline:1px solid currentColor; outline-offset:5px; }
 }
 
 /* Messina body copy; the original header and headings remain Caslon. */
-@font-face { font-family:"Messina Sans"; src:url("../../fonts/MessinaSans-Regular.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap; }
-@font-face { font-family:"Messina Sans"; src:url("../../fonts/MessinaSans-Italic.woff2") format("woff2"); font-weight:400; font-style:italic; font-display:swap; }
-@font-face { font-family:"Messina Sans"; src:url("../../fonts/MessinaSans-Bold.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:swap; }
-@font-face { font-family:"Messina Sans"; src:url("../../fonts/MessinaSans-BoldItalic.woff2") format("woff2"); font-weight:700; font-style:italic; font-display:swap; }
+@font-face { font-family:"Messina Sans"; src:url("../fonts/MessinaSans-Regular.woff2") format("woff2"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Messina Sans"; src:url("../fonts/MessinaSans-RegularItalic.woff2") format("woff2"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Messina Sans"; src:url("../fonts/MessinaSans-Bold.woff2") format("woff2"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"Messina Sans"; src:url("../fonts/MessinaSans-BoldItalic.woff2") format("woff2"); font-weight:700; font-style:italic; font-display:swap; }
 
 .services p, .services .text-links, .services .contact-email, .services footer { font-family:"Messina Sans","adobe-caslon-pro",serif; }
 .services p, .services .columns p, .services .copy-panel p, .services .about-services p, .services .section-lead, .services .intro > div:first-child > p { font-size:1.7rem; line-height:1.2; }
