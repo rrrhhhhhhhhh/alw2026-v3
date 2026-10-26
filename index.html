@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALW — Creative Services Index</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #111111;
+            --border-color: #000000;
+            --accent-color: #555555;
+        }
+
+        body {
+            font-family: "Courier New", Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+
+        header {
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .manifesto {
+            font-size: 16px;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-block {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            border-top: 1px solid var(--border-color);
+            padding: 30px 0;
+        }
+
+        .timeline-year {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .timeline-content {
+            max-width: 650px;
+        }
+
+        .timeline-content h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+
+        .timeline-content p {
+            margin: 0 0 20px 0;
+        }
+
+        .meta-tags {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            display: inline-block;
+            border: 1px solid var(--border-color);
+            padding: 3px 8px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 100px auto 0 auto;
+            border-top: 2px solid var(--border-color);
+            padding-top: 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <a href="#">Consulting</a>
+            <a href="#">Teams</a>
+            <a href="#">Styling</a>
+            <a href="#">Contact</a>
+        </div>
+        <h1>Andrea Longacre-White</h1>
+        <p class="manifesto">I find the magic in the story, and in the look. I walk into a room, a script, or a conversation and feel everything at once: what's happening, what isn't being said, and what it's really about.</p>
+    </header>
+
+    <main>
+
+        <!-- Core Film Experience Block -->
+        <div class="timeline-block">
+            <div class="timeline-year">CORE</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Cinematic Production // Creative Consultation</div>
+                <h2>The Mills Collaborations & Script Diagnosis</h2>
+                <p>Expert in human feelings. Produced with Mike Mills on <em>C'mon C'mon</em> and <em>20th Century Women</em>. Bringing alignment, identifying what moves a project forward, and parsing the soul of high-grossing film scripts from the first draft to the final cut.</p>
+            </div>
+        </div>
+
+        <!-- Service 01 -->
+        <div class="timeline-block">
+            <div class="timeline-year">01</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Service // Script Diagnosis</div>
+                <h2>A Full Read & Strategic Architecture</h2>
+                <p>A comprehensive diagnostic evaluation of your script architecture. Includes a deeply detailed, written structural notes memo followed up by a rigorous 90-minute alignment call. You will walk away knowing exactly what elements are firing, what essential layers are missing, and the exact roadmap needed to fix them.</p>
+                <div class="price-tag">From $2,500</div>
+            </div>
+        </div>
+
+        <!-- Service 02 -->
+        <div class="timeline-block">
+            <div class="timeline-year">02</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Service // Cut Consult</div>
+                <h2>Rough Cut Synthesis & Editorial Guidance</h2>
+                <p>Fresh external eyes to locate the true film hidden deep inside your unrefined footage. I review your current rough cut trajectory, distilling raw creative decisions down to pure cinematic magic via a meticulous notes memo and phone consultation.</p>
+                <div class="price-tag">From $1,500 / Day</div>
+            </div>
+        </div>
+
+        <!-- Service 03 -->
+        <div class="timeline-block">
+            <div class="timeline-year">03</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Service // Look & Tone</div>
+                <h2>Visual Aesthetics & Narrative Direction</h2>
+                <p>Comprehensive visual and structural aesthetic direction built for films, series, or cohesive foundational brands. Ensuring your physical color palettes, costuming, environments, and overall visual text tell the exact same story your script dictates.</p>
+                <div class="price-tag">From $2,500</div>
+            </div>
+        </div>
+
+        <!-- Service 04 -->
+        <div class="timeline-block">
+            <div class="timeline-year">04</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Service // Alignment Session</div>
+                <h2>Organizational Chaos Remediation</h2>
+                <p>Built explicitly for production companies, agencies, brands, and founders pulling in completely opposite directions. Short, targeted one-on-one discovery conversations followed by a targeted half-day group alignment session to build one operational path forward.</p>
+                <div class="price-tag">From $3,500</div>
+            </div>
+        </div>
+
+        <!-- Service 05 -->
+        <div class="timeline-block">
+            <div class="timeline-year">05</div>
+            <div class="timeline-content">
+                <div class="meta-tags">Service // Closet & Identity Edit</div>
+                <h2>Aesthetic Overhaul & Identity Wardrobe</h2>
+                <p>Tailored wardrobe architecture built for filmmakers and actors navigating high-stakes press runs or individuals ready for physical self-honesty. Editing your immediate closet, constructing modern outfits out of elements you own, and establishing a targeted shopping architecture.</p>
+                <div class="price-tag">From $1,000</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="contact-grid">
+            <div class="timeline-year">INFO</div>
+            <div class="contact-info">
+                <h2>Have a project or team that is almost there?</h2>
+                <p>Send a brief summary detailing your project scope, ideal delivery timeline, and structural budget parameters. Responses are processed within two business days.</p>
+                <a href="mailto:andrea.longacre.white@gmail.com">andrea.longacre.white@gmail.com</a>
+                <a href="#">Instagram @andrealongacrewhite</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
 
