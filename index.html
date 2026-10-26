@@ -3,243 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALW — Creative Services Index (Unica77 Optimization)</title>
+    <title>ALW — Creative Services Index v3</title>
     <style>
-        /* Embedding LL Unica77 alternatives via standard system grotesque fallbacks for testing */
         :root {
             --bg-color: #f4f4f4;
             --text-color: #000000;
             --border-color: #000000;
             --accent-color: #555555;
-            
-            /* Replicating Unica77 metrics: geometric, clean apexes, slightly condensed numerals */
             --font-stack: "LL Unica77", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
+
+        * { box-sizing: border-box; }
 
         body {
             font-family: var(--font-stack);
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 80px 40px;
+            padding: 0;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.45;
             letter-spacing: -0.01em;
             -webkit-font-smoothing: antialiased;
         }
 
+        /* Fixed Top Header System from Your Original Test Layout Configuration */
         header {
-            max-width: 1050px;
-            margin: 0 auto 120px auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 50px;
+            z-index: 1000;
+            padding: 30px 40px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin: 0;
+            text-transform: uppercase;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
-            margin-bottom: 80px;
+            gap: 24px;
+        }
+
+        .nav-item {
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em; /* Strategy 1: Wide tracking for system accents */
-        }
-
-        .nav-links a {
+            letter-spacing: 0.1em;
             color: var(--text-color);
             text-decoration: none;
+            padding: 4px 8px;
+            transition: background-color 0.1s ease, color 0.1s ease;
         }
 
-        h1 {
-            font-size: 42px;
-            font-weight: 700;
-            letter-spacing: -0.04em; /* Strategy 2: Tight tracking for large text display */
-            margin: 0 0 24px 0;
-            text-transform: uppercase;
+        /* Strobe/Flashing Keyframes for Section Transitions */
+        @keyframes strobe-flash {
+            0% { background-color: #000000; color: #ffffff; }
+            25% { background-color: transparent; color: #000000; }
+            50% { background-color: #000000; color: #ffffff; }
+            75% { background-color: transparent; color: #000000; }
+            100% { background-color: #000000; color: #ffffff; }
         }
 
-        .manifesto {
-            font-size: 19px;
-            font-weight: 400;
-            max-width: 750px;
-            line-height: 1.45;
-            letter-spacing: -0.02em;
-            color: #1a1a1a;
+        .nav-item.flashing {
+            animation: strobe-flash 0.4s ease-in-out forwards;
         }
 
+        .nav-item.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .tagline {
+            font-size: 14px;
+            max-width: 600px;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Layout Main Content Matrix */
         main {
-            max-width: 1050px;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: 220px auto 0 auto; /* Clearance for fixed layout header */
+            padding: 0 40px;
         }
 
-        .timeline-block {
+        /* Three Column Specimen Grid Construction */
+        .grid-row {
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 160px 240px 1fr;
+            gap: 40px;
             border-top: 1px solid var(--border-color);
-            padding: 45px 0;
+            padding: 60px 0;
+            scroll-margin-top: 240px; /* Aligns section window cleanly when tracking scroll position */
         }
 
-        .timeline-year {
-            font-size: 24px;
+        .col-index {
+            font-size: 28px;
             font-weight: 700;
-            letter-spacing: -0.03em;
             line-height: 1;
+            letter-spacing: -0.04em;
         }
 
-        .timeline-content {
-            max-width: 720px;
-        }
-
-        .timeline-content h2 {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 0 0 16px 0;
-        }
-
-        .timeline-content p {
-            margin: 0 0 28px 0;
-            font-weight: 400;
-            color: #222222;
-        }
-
-        .meta-tags {
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em; /* Strategy 1: Extreme tracking vs the body text */
-            color: var(--accent-color);
-            margin-bottom: 14px;
-        }
-
-        .price-tag {
-            display: inline-block;
-            border: 1px solid var(--border-color);
-            padding: 5px 14px;
+        .col-meta h3 {
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.12em;
+            color: var(--accent-color);
+            margin: 0 0 10px 0;
+        }
+
+        .col-meta .price {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid #000;
+            padding: 2px 6px;
+            margin-top: 15px;
+        }
+
+        .col-body h2 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        .col-body p {
+            margin: 0;
+            color: #1a1a1a;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         footer {
-            max-width: 1050px;
-            margin: 140px auto 0 auto;
-            border-top: 1px solid var(--border-color);
-            padding-top: 60px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-        }
-
-        .contact-info h2 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin: 0 0 24px 0;
-        }
-
-        .contact-info p {
-            max-width: 620px;
-            margin-bottom: 35px;
-            font-size: 15px;
-        }
-
-        .contact-info a {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-color);
-            display: block;
-            margin-bottom: 14px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
+            border-top: 1px solid #000;
+            padding: 80px 0 120px 0;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-links">
-            <a href="#">Consulting</a>
-            <a href="#">Teams</a>
-            <a href="#">Styling</a>
-            <a href="#">Contact</a>
+        <div class="header-top">
+            <h1>Andrea Longacre-White</h1>
+            <nav class="nav-links">
+                <!-- data-target links cleanly to the section IDs below -->
+                <a href="#consulting" class="nav-item" data-target="consulting">Consulting</a>
+                <a href="#teams" class="nav-item" data-target="teams">Teams</a>
+                <a href="#styling" class="nav-item" data-target="styling">Styling</a>
+            </nav>
         </div>
-        <h1>Andrea Longacre-White</h1>
-        <p class="manifesto">I find the magic in the story, and in the look. I walk into a room, a script, or a conversation and feel everything at once: what's happening, what isn't being said, and what it's really about.</p>
+        <p class="tagline">I find the magic in the story, and in the look. Story, style and people are the same skill.</p>
     </header>
 
     <main>
 
-        <div class="timeline-block">
-            <div class="timeline-year">CORE</div>
-            <div class="timeline-content">
-                <div class="meta-tags">Cinematic Production // Creative Consultation</div>
-                <h2>The Mills Collaborations & Script Diagnosis</h2>
-                <p>Expert in human feelings. Produced with Mike Mills on <em>C'mon C'mon</em> and <em>20th Century Women</em>. Bringing alignment, identifying what moves a project forward, and parsing the soul of high-grossing film scripts from the first draft to the final cut.</p>
+        <!-- CATEGORY: CONSULTING -->
+        <div id="consulting" class="grid-row" data-section="consulting">
+            <div class="col-index">01 // CON</div>
+            <div class="col-meta">
+                <h3>Script Diagnosis</h3>
+                <p>From draft to script ready to shop.</p>
+                <div class="price">From $2,500</div>
             </div>
-        </div>
-
-        <div class="timeline-block">
-            <div class="timeline-year">01</div>
-            <div class="timeline-content">
-                <div class="meta-tags">Service // Script Diagnosis</div>
+            <div class="col-body">
                 <h2>A Full Read & Strategic Architecture</h2>
                 <p>A comprehensive diagnostic evaluation of your script architecture. Includes a deeply detailed, written structural notes memo followed up by a rigorous 90-minute alignment call. You will walk away knowing exactly what elements are firing, what essential layers are missing, and the exact roadmap needed to fix them.</p>
-                <div class="price-tag">From $2,500</div>
             </div>
         </div>
 
-        <div class="timeline-block">
-            <div class="timeline-year">02</div>
-            <div class="timeline-content">
-                <div class="meta-tags">Service // Cut Consult</div>
+        <div class="grid-row" data-section="consulting">
+            <div class="col-index">02 // CON</div>
+            <div class="col-meta">
+                <h3>Cut Consult</h3>
+                <p>Rough cut to final composition.</p>
+                <div class="price">From $1,500 / Day</div>
+            </div>
+            <div class="col-body">
                 <h2>Rough Cut Synthesis & Editorial Guidance</h2>
                 <p>Fresh external eyes to locate the true film hidden deep inside your unrefined footage. I review your current rough cut trajectory, distilling raw creative decisions down to pure cinematic magic via a meticulous notes memo and phone consultation.</p>
-                <div class="price-tag">From $1,500 / Day</div>
             </div>
         </div>
 
-        <div class="timeline-block">
-            <div class="timeline-year">03</div>
-            <div class="timeline-content">
-                <div class="meta-tags">Service // Look & Tone</div>
-                <h2>Visual Aesthetics & Narrative Direction</h2>
-                <p>Comprehensive visual and structural aesthetic direction built for films, series, or cohesive foundational brands. Ensuring your physical color palettes, costuming, environments, and overall visual text tell the exact same story your script dictates.</p>
-                <div class="price-tag">From $2,500</div>
+        <!-- CATEGORY: TEAMS -->
+        <div id="teams" class="grid-row" data-section="teams">
+            <div class="col-index">03 // TEAM</div>
+            <div class="col-meta">
+                <h3>Alignment Session</h3>
+                <p>For production houses and crews.</p>
+                <div class="price">From $3,500</div>
             </div>
-        </div>
-
-        <div class="timeline-block">
-            <div class="timeline-year">04</div>
-            <div class="timeline-content">
-                <div class="meta-tags">Service // Alignment Session</div>
+            <div class="col-body">
                 <h2>Organizational Chaos Remediation</h2>
                 <p>Built explicitly for production companies, agencies, brands, and founders pulling in completely opposite directions. Short, targeted one-on-one discovery conversations followed by a targeted half-day group alignment session to build one operational path forward.</p>
-                <div class="price-tag">From $3,500</div>
+            </div>
+        </div>
+
+        <!-- CATEGORY: STYLING -->
+        <div id="styling" class="grid-row" data-section="styling">
+            <div class="col-index">04 // STYLE</div>
+            <div class="col-meta">
+                <h3>Closet Edit</h3>
+                <p>Wardrobe identity structure.</p>
+                <div class="price">From $1,000</div>
+            </div>
+            <div class="col-body">
+                <h2>Aesthetic Overhaul & Identity Wardrobe</h2>
+                <p>Tailored wardrobe architecture built for filmmakers and actors navigating high-stakes press runs or individuals ready for physical self-honesty. Editing your immediate closet, constructing modern outfits out of elements you own, and establishing a targeted shopping architecture.</p>
             </div>
         </div>
 
     </main>
 
     <footer>
-        <div class="contact-grid">
-            <div class="timeline-year">INFO</div>
-            <div class="contact-info">
-                <h2>Have a project or team that is almost there?</h2>
-                <p>Send a brief summary detailing your project scope, ideal delivery timeline, and structural budget parameters. Responses are processed within two business days.</p>
-                <a href="mailto:andrea.longacre.white@gmail.com">andrea.longacre.white@gmail.com</a>
-                <a href="#">Instagram @andrealongacrewhite</a>
-            </div>
-        </div>
+        <!-- Formatted cleanly for terminal data summary views -->
     </footer>
 
-</body>
-</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.grid-row');
+            let currentActiveSection = null;
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px', // Focus threshold window for active intersections
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionName = entry.target.getAttribute('data-section');
+                        
+                        if (currentActiveSection !== sectionName) {
+                            currentActiveSection = sectionName;
+                            triggerHeaderFlash(sectionName);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+
+            function triggerHeaderFlash(targetSection) {
+                navItems.forEach(item => {
+                    const itemTarget = item.getAttribute('data-target');
+                    
+                    // Strip down prior state metrics cleanly
+                    item.classList.remove('active', 'flashing');
+                    
+                    if (itemTarget === targetSection) {
+                        // Apply flash strobe effect class
