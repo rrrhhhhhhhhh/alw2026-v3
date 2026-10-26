@@ -1,163 +1,232 @@
+/* Exact Adobe Caslon Pro Typekit Vector Mapping Data System Embedded Cleanly */
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src:
+        url("https://typekit.net") format("woff2"),
+        url("https://typekit.net") format("woff"),
+        url("https://typekit.net") format("opentype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src:
+        url("https://typekit.net") format("woff2"),
+        url("https://typekit.net") format("woff"),
+        url("https://typekit.net") format("opentype");
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #fcfcfc;
+    --text-color: #000000;
+    --border-color: #000000;
+    --accent-color: #555555;
+    --font-stack: "adobe-caslon-pro", Georgia, serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: var(--font-stack);
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-color);
+    padding: 2px 6px;
+    transition: background-color 0.05s ease, color 0.05s ease;
+}
+
+@keyframes strobe-flash {
+    0% { background-color: #000000; color: #ffffff; }
+    20% { background-color: transparent; color: #000000; }
+    40% { background-color: #000000; color: #ffffff; }
+    60% { background-color: transparent; color: #000000; }
+    80% { background-color: #000000; color: #ffffff; }
+    100% { background-color: #000000; color: #ffffff; }
+}
+
+.nav-item.flashing {
+    animation: strobe-flash 0.35s steps(2, start) forwards;
+}
+
+.nav-item.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.tagline {
+    font-size: 16px;
+    font-style: italic;
+    max-width: 750px;
+    margin: 0;
+    color: #222222;
+}
+
+main {
+    max-width: 1100px;
+    margin: 240px auto 0 auto;
+    padding: 0 40px;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 180px 260px 1fr;
+    gap: 40px;
+    border-top: 1px solid var(--border-color);
+    padding: 55px 0;
+    scroll-margin-top: 240px;
+}
+
+.col-index {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+
+.col-meta h3 {
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-color);
+    margin: 0 0 8px 0;
+}
+
+.col-meta p {
+    font-size: 14px;
+    font-style: italic;
+    color: #444444;
+    line-height: 1.45;
+}
+
+.col-meta .price {
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #000000;
+    padding: 3px 8px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.col-body h2 {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.col-body p {
+    margin: 0;
+    color: #111111;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    max-width: 1100px;
+    margin: 120px auto 0 auto;
+    padding: 80px 40px 120px 40px;
+    border-top: 1px solid #000000;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #222222;
+}
+
+.footer-content a {
+    font-size: 14px;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 12px;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-content a:hover {
+    border-bottom: 1px solid var(--text-color);
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALW — Creative Services Index v3</title>
-    <style>
-        :root {
-            --bg-color: #f4f4f4;
-            --text-color: #000000;
-            --border-color: #000000;
-            --accent-color: #555555;
-            --font-stack: "LL Unica77", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            font-family: var(--font-stack);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            font-size: 14px;
-            line-height: 1.45;
-            letter-spacing: -0.01em;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Fixed Top Header System from Your Original Test Layout Configuration */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--bg-color);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            padding: 30px 40px;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .nav-item {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 4px 8px;
-            transition: background-color 0.1s ease, color 0.1s ease;
-        }
-
-        /* Strobe/Flashing Keyframes for Section Transitions */
-        @keyframes strobe-flash {
-            0% { background-color: #000000; color: #ffffff; }
-            25% { background-color: transparent; color: #000000; }
-            50% { background-color: #000000; color: #ffffff; }
-            75% { background-color: transparent; color: #000000; }
-            100% { background-color: #000000; color: #ffffff; }
-        }
-
-        .nav-item.flashing {
-            animation: strobe-flash 0.4s ease-in-out forwards;
-        }
-
-        .nav-item.active {
-            background-color: #000000;
-            color: #ffffff;
-        }
-
-        .tagline {
-            font-size: 14px;
-            max-width: 600px;
-            margin: 0;
-            color: #333;
-        }
-
-        /* Layout Main Content Matrix */
-        main {
-            max-width: 1000px;
-            margin: 220px auto 0 auto; /* Clearance for fixed layout header */
-            padding: 0 40px;
-        }
-
-        /* Three Column Specimen Grid Construction */
-        .grid-row {
-            display: grid;
-            grid-template-columns: 160px 240px 1fr;
-            gap: 40px;
-            border-top: 1px solid var(--border-color);
-            padding: 60px 0;
-            scroll-margin-top: 240px; /* Aligns section window cleanly when tracking scroll position */
-        }
-
-        .col-index {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        .col-meta h3 {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent-color);
-            margin: 0 0 10px 0;
-        }
-
-        .col-meta .price {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            border: 1px solid #000;
-            padding: 2px 6px;
-            margin-top: 15px;
-        }
-
-        .col-body h2 {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-        }
-
-        .col-body p {
-            margin: 0;
-            color: #1a1a1a;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        footer {
-            border-top: 1px solid #000;
-            padding: 80px 0 120px 0;
-            margin-top: 100px;
-        }
-    </style>
+    <title>ALW — Creative Services Index (Caslon Pro Uncut)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -165,7 +234,6 @@
         <div class="header-top">
             <h1>Andrea Longacre-White</h1>
             <nav class="nav-links">
-                <!-- data-target links cleanly to the section IDs below -->
                 <a href="#consulting" class="nav-item" data-target="consulting">Consulting</a>
                 <a href="#teams" class="nav-item" data-target="teams">Teams</a>
                 <a href="#styling" class="nav-item" data-target="styling">Styling</a>
@@ -175,13 +243,12 @@
     </header>
 
     <main>
-
-        <!-- CATEGORY: CONSULTING -->
+        <!-- CATEGORY BLOCK: CONSULTING -->
         <div id="consulting" class="grid-row" data-section="consulting">
-            <div class="col-index">01 // CON</div>
+            <div class="col-index">01 // CNSL</div>
             <div class="col-meta">
                 <h3>Script Diagnosis</h3>
-                <p>From draft to script ready to shop.</p>
+                <p>From narrative draft to a script ready to shop.</p>
                 <div class="price">From $2,500</div>
             </div>
             <div class="col-body">
@@ -191,10 +258,10 @@
         </div>
 
         <div class="grid-row" data-section="consulting">
-            <div class="col-index">02 // CON</div>
+            <div class="col-index">02 // CNSL</div>
             <div class="col-meta">
                 <h3>Cut Consult</h3>
-                <p>Rough cut to final composition.</p>
+                <p>Isolating the structural cut from raw footage.</p>
                 <div class="price">From $1,500 / Day</div>
             </div>
             <div class="col-body">
@@ -203,12 +270,12 @@
             </div>
         </div>
 
-        <!-- CATEGORY: TEAMS -->
+        <!-- CATEGORY BLOCK: TEAMS -->
         <div id="teams" class="grid-row" data-section="teams">
             <div class="col-index">03 // TEAM</div>
             <div class="col-meta">
                 <h3>Alignment Session</h3>
-                <p>For production houses and crews.</p>
+                <p>Re-centering multi-directional creative crews.</p>
                 <div class="price">From $3,500</div>
             </div>
             <div class="col-body">
@@ -217,12 +284,12 @@
             </div>
         </div>
 
-        <!-- CATEGORY: STYLING -->
+        <!-- CATEGORY BLOCK: STYLING -->
         <div id="styling" class="grid-row" data-section="styling">
-            <div class="col-index">04 // STYLE</div>
+            <div class="col-index">04 // STYL</div>
             <div class="col-meta">
                 <h3>Closet Edit</h3>
-                <p>Wardrobe identity structure.</p>
+                <p>Physical wardrobe updates matching internal identity text.</p>
                 <div class="price">From $1,000</div>
             </div>
             <div class="col-body">
@@ -230,46 +297,99 @@
                 <p>Tailored wardrobe architecture built for filmmakers and actors navigating high-stakes press runs or individuals ready for physical self-honesty. Editing your immediate closet, constructing modern outfits out of elements you own, and establishing a targeted shopping architecture.</p>
             </div>
         </div>
-
     </main>
 
     <footer>
-        <!-- Formatted cleanly for terminal data summary views -->
+        <div class="footer-grid">
+            <div class="col-index">INFO</div>
+            <div class="footer-content">
+                <h2>Have a project or team that is almost there?</h2>
+                <p>Send a brief summary detailing your project scope, ideal delivery timeline, and structural budget parameters. Responses are processed within two business days.</p>
+                <a href="mailto:andrea.longacre.white@gmail.com">andrea.longacre.white@gmail.com</a>
+                <a href="#">Instagram @andrealongacrewhite</a>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navItems = document.querySelectorAll('.nav-item');
-            const sections = document.querySelectorAll('.grid-row');
-            let currentActiveSection = null;
+    <script src="script.js"></script>
+</body>
+</html>
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '-20% 0px -60% 0px', // Focus threshold window for active intersections
-                threshold: 0
-            };
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('.grid-row');
+    let currentActiveSection = null;
+    let isManualScrolling = false;
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const sectionName = entry.target.getAttribute('data-section');
-                        
-                        if (currentActiveSection !== sectionName) {
-                            currentActiveSection = sectionName;
-                            triggerHeaderFlash(sectionName);
-                        }
-                    }
+    /* Intersection Observer Configuration Parameters */
+    const observerOptions = {
+        root: null,
+        rootMargin: '-25% 0px -55% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        if (isManualScrolling) return;
+        
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionName = entry.target.getAttribute('data-section');
+                
+                if (currentActiveSection !== sectionName) {
+                    currentActiveSection = sectionName;
+                    triggerHeaderFlash(sectionName);
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    function triggerHeaderFlash(targetSection) {
+        navItems.forEach(item => {
+            const itemTarget = item.getAttribute('data-target');
+            item.classList.remove('active', 'flashing');
+            
+            if (itemTarget === targetSection) {
+                item.classList.add('flashing');
+                
+                setTimeout(() => {
+                    item.classList.remove('flashing');
+                    item.classList.add('active');
+                }, 350);
+            }
+        });
+    }
+
+    /* Intercepting Navigation Clicks for Smooth Transitions & Forced Flash State */
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = item.getAttribute('href');
+            const targetSectionElement = document.querySelector(targetId);
+            
+            if (targetSectionElement) {
+                isManualScrolling = true;
+                const targetSectionName = item.getAttribute('data-target');
+                
+                currentActiveSection = targetSectionName;
+                triggerHeaderFlash(targetSectionName);
+
+                targetSectionElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-            }, observerOptions);
 
-            sections.forEach(section => observer.observe(section));
-
-            function triggerHeaderFlash(targetSection) {
-                navItems.forEach(item => {
-                    const itemTarget = item.getAttribute('data-target');
-                    
-                    // Strip down prior state metrics cleanly
-                    item.classList.remove('active', 'flashing');
-                    
-                    if (itemTarget === targetSection) {
-                        // Apply flash strobe effect class
+                let scrollTimeout;
+                function checkScrollEnd() {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        isManualScrolling = false;
+                        window.removeEventListener('scroll', checkScrollEnd);
+                    }, 100);
+                }
+                window.addEventListener('scroll', checkScrollEnd);
+            }
+        });
+    });
+});
